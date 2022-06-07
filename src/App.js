@@ -12,6 +12,7 @@ function App() {
 
     if (storedUserLoggedIn === '1') {
       setIsLoggedIn(true);
+      console.log("setloggedin is now true")
     }
   }, []);
 
@@ -23,6 +24,7 @@ function App() {
   };
 
   const logoutHandler = () => {
+    localStorage.removeItem('isLoggedIn')
     setIsLoggedIn(false);
   };
 
